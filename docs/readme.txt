@@ -1,0 +1,1 @@
+later have to add images in /images for frontend and backend workflow of motia, api response
