@@ -23,5 +23,55 @@
         "sourceHandlePosition": "right"
       }
     }
+  },
+  {
+    "id": "qa-flow",
+    "config": {
+      "src\\steps\\api-steps\\answerQuestion.step.ts": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  {
+    "id": "memory-flow",
+    "config": {
+      "src\\steps\\event-steps\\scheduleReactivation.step.ts": {
+        "x": 935,
+        "y": 407
+      },
+      "src\\steps\\event-steps\\reactivateMemory.step.ts": {
+        "x": 1312,
+        "y": 74
+      },
+      "src\\steps\\event-steps\\notifyUser.step.ts": {
+        "x": 1629,
+        "y": 405
+      },
+      "src\\steps\\event-steps\\embedMemory.step.ts": {
+        "x": 517,
+        "y": 108
+      },
+      "src\\steps\\event-steps\\analyzeAI.step.ts": {
+        "x": 483,
+        "y": 559
+      },
+      "src\\steps\\api-steps\\update-memory.step.ts": {
+        "x": -150,
+        "y": -9
+      },
+      "src\\steps\\api-steps\\search-memory.step.ts": {
+        "x": 7,
+        "y": 204
+      },
+      "src\\steps\\api-steps\\log-memory.step.ts": {
+        "x": 0,
+        "y": 408
+      },
+      "src\\steps\\api-steps\\get-memory.step.ts": {
+        "x": 6,
+        "y": 612
+      }
+    }
   }
 ]
