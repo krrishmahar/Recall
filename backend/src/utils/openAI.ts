@@ -1,20 +1,36 @@
 
 import OpenAI from 'openai';
+import { HfInference } from '@huggingface/inference';
 
 // Initialize OpenAI client
 export const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  // apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPEROUTER_API_KEY,
   baseURL: "https://openrouter.ai/api/v1",
 });
 
-// Generate embeddings
+// // Generate embeddings
+// export async function generateEmbedding(text: string): Promise<number[]> {
+//   const response = await openai.embeddings.create({
+//     model: 'nvidia/nemotron-nano-9b-v2:free',
+//     input: text,
+//   });
+
+//   return response.data[0].embedding;
+// }
+
+
+// Hugging Face for embeddings
+const hf = new HfInference(process.env.HUGGINGFACE_API_KEY);
+
+// Generate embeddings (using Hugging Face)
 export async function generateEmbedding(text: string): Promise<number[]> {
-  const response = await openai.embeddings.create({
-    model: 'nvidia/nemotron-nano-9b-v2:free',
-    input: text,
+  const response = await hf.featureExtraction({
+    model: 'sentence-transformers/all-MiniLM-L6-v2',
+    inputs: text,
   });
 
-  return response.data[0].embedding;
+  return Array.from(response as unknown as Float32Array);
 }
 
 // Classify memory with AI

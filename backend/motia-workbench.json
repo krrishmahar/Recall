@@ -69,8 +69,8 @@
         "y": 437
       },
       "src\\steps\\event-steps\\analyticsTracker.step.ts": {
-        "x": 958,
-        "y": -38
+        "x": 918,
+        "y": -56
       },
       "src\\steps\\api-steps\\update-memory.step.ts": {
         "x": -591,
@@ -91,18 +91,6 @@
       "src\\steps\\api-steps\\delete-memory.step.ts": {
         "x": -568,
         "y": -287
-      },
-      "src\\.motia\\compiled\\steps\\event-steps\\memoryDeletedHandler.step.js": {
-        "x": 0,
-        "y": 0
-      },
-      "src\\.motia\\compiled\\steps\\event-steps\\analyticsTracker.step.js": {
-        "x": 0,
-        "y": 0
-      },
-      "src\\.motia\\compiled\\steps\\event-steps\\notifyUser.step.js": {
-        "x": 0,
-        "y": 0
       }
     }
   }
